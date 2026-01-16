@@ -404,16 +404,30 @@ bocha-mcp:
 
 ### 🚀 **Run Paper2Sim**
 
+#### **Supported Formats**
+
+Paper2Sim supports two input formats:
+- **Markdown (`.md`)**: For plain text papers or pre-converted documents
+- **PDF (`.pdf`)**: ⭐ **Recommended for math-heavy OR/OM/MS papers**
+  - Directly processed by PDF-capable models (e.g., Gemini)
+  - Preserves mathematical notation, formulas, and Greek letters
+  - No manual text conversion needed
+
 ```bash
-# Basic usage
+# Using Markdown file
 python -m paper2sim.main --paper path/to/paper.md
 
+# Using PDF file (recommended for mathematical papers)
+python -m paper2sim.main --paper path/to/paper.pdf
+
 # Specify output directory
-python -m paper2sim.main --paper paper.md --output ./simulations --name physician_sim
+python -m paper2sim.main --paper paper.pdf --output ./simulations --name my_sim
 
 # Enable Phase 4 features (after calibration!)
-python -m paper2sim.main --paper paper.md --phase4
+python -m paper2sim.main --paper paper.pdf --phase4
 ```
+
+> 💡 **PDF Support**: When using PDF input, the system automatically uses PDF-capable models (like `google/gemini-2.0-flash-exp`) to directly process the file, ensuring accurate extraction of mathematical formulas. See [PDF Support Documentation](paper2sim/PDF_SUPPORT.md)
 
 ### 📝 **Programmatic Usage**
 
@@ -427,9 +441,9 @@ workflow = Paper2SimWorkflow(
     output_base_dir="./paper2sim_output"
 )
 
-# Run pipeline
+# Run pipeline (supports .md or .pdf files)
 results = await workflow.run_full_pipeline(
-    paper_path="papers/physician_testing.md",
+    paper_path="papers/physician_testing.pdf",  # or .md file
     project_name="physician_sim",
     enable_phase4=False  # Start with calibration only
 )

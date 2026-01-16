@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 from paper2sim.workflows.paper2sim_workflow import Paper2SimWorkflow
-from utils.llm_utils import get_preferred_llm_class
+from utils.llm_utils import get_preferred_llm_class, get_llm_factories
 
 
 def print_banner():
@@ -37,16 +37,24 @@ async def run_pipeline(args):
         print(f"❌ Error: Paper not found: {paper_path}")
         sys.exit(1)
     
-    if not paper_path.suffix == '.md':
-        print(f"❌ Error: Paper must be in markdown format (.md)")
+    if not paper_path.suffix in ['.md', '.pdf']:
+        print(f"❌ Error: Paper must be in markdown (.md) or PDF (.pdf) format")
         sys.exit(1)
     
-    # Get LLM factory
-    llm_factory = get_preferred_llm_class()
+    # Get separate LLM factories for planning and implementation
+    # Planning model: Used for analysis/extraction tasks (Theorist, Architect, etc.)
+    # Implementation model: Used for code generation tasks (Engineer, test writing, etc.)
+    planning_factory, implementation_factory, planning_model, implementation_model = get_llm_factories()
     
-    # Initialize workflow
+    print(f"\n🎯 Model Assignment:")
+    print(f"   📖 Planning tasks: {planning_model}")
+    print(f"   💻 Implementation tasks: {implementation_model}")
+    print()
+    
+    # Initialize workflow with both factories
     workflow = Paper2SimWorkflow(
-        llm_factory=llm_factory,
+        planning_factory=planning_factory,
+        implementation_factory=implementation_factory,
         output_base_dir=args.output or "./paper2sim_output"
     )
     

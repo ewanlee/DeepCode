@@ -44,8 +44,7 @@ mcp:
       args:
       - -y
       - '@modelcontextprotocol/server-filesystem'
-      - .
-      - ./deepcode_lab
+      - /Users/ewanlee/Codes/DeepCode
       command: npx
 
       # windows should use this
@@ -114,13 +113,14 @@ openai:
   # default_model: openai/gpt-oss-120b
   # default_model: deepseek/deepseek-v3.2-exp
   # default_model: moonshotai/kimi-k2-thinking
-  reasoning_effort: low  # Only for thinking models
+  reasoning_effort: high  # Only for thinking models: low, medium, high
   max_tokens_policy: adaptive
   retry_max_tokens: 32768
 
-# Provider configurations
-# default_model is used by mcp_agent for planning/analysis phases
-# implementation_model is used by code_implementation_workflow for code generation
+# Provider-specific configurations
+# Note: When using openrouter, the models should use OpenRouter format (provider/model-name)
+# The 'openai' section above is used by OpenAIAugmentedLLM regardless of whether
+# you're using OpenAI directly or through OpenRouter
 google:
   default_model: "gemini-3-pro-preview"
   planning_model: "gemini-3-pro-preview"
@@ -131,20 +131,15 @@ anthropic:
   planning_model: "claude-sonnet-4.5"
   implementation_model: "claude-sonnet-3.5"
 
-openai:
-  default_model: "o3-mini"
-  planning_model: "o3-mini"
-  implementation_model: "gpt-4o"
-
 # OpenRouter configuration (unified gateway to multiple LLM providers)
 # Use OpenRouter model format: provider/model-name
 # Examples: "anthropic/claude-sonnet-4", "google/gemini-2.0-flash-exp", "openai/gpt-4o"
 # Get API key from: https://openrouter.ai/keys
 openrouter:
   base_url: "https://openrouter.ai/api/v1"
-  default_model: "anthropic/claude-sonnet-4"
-  planning_model: "anthropic/claude-sonnet-4"
-  implementation_model: "google/gemini-2.0-flash-exp"
+  default_model: "google/gemini-3-pro-preview"
+  planning_model: "google/gemini-3-pro-preview"
+  implementation_model: "anthropic/claude-sonnet-4.5"
   # Optional: Set site URL and app name for OpenRouter rankings
   # site_url: "https://yourapp.com"
   # app_name: "YourApp"

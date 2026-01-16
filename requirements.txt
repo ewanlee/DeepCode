@@ -4,6 +4,7 @@ anthropic
 asyncio-mqtt
 docling
 google-genai
+httpx>=0.27.0
 mcp-agent
 mcp-server-git
 nest_asyncio

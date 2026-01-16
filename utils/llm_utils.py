@@ -91,7 +91,30 @@ def load_api_config(secrets_path: str = "mcp_agent.secrets.yaml") -> Dict[str, A
     return config
 
 
-def _get_llm_class(provider: str) -> Type[Any]:
+def _configure_openrouter_env(secrets_path: str = "mcp_agent.secrets.yaml"):
+    """
+    Configure environment variables for OpenRouter.
+    
+    OpenRouter uses OpenAI-compatible API, so we need to set OPENAI_API_KEY
+    and OPENAI_BASE_URL to point to OpenRouter.
+    """
+    # Load OpenRouter configuration
+    api_config = load_api_config(secrets_path)
+    openrouter_config = api_config.get("openrouter", {})
+    
+    openrouter_key = openrouter_config.get("api_key", "")
+    openrouter_base_url = openrouter_config.get("base_url", "https://openrouter.ai/api/v1")
+    
+    if openrouter_key:
+        # Set environment variables for OpenAI SDK to use OpenRouter
+        os.environ["OPENAI_API_KEY"] = openrouter_key
+        os.environ["OPENAI_BASE_URL"] = openrouter_base_url
+        print(f"🔧 Configured OpenAI SDK to use OpenRouter (base_url: {openrouter_base_url})")
+    else:
+        print("⚠️ OpenRouter API key not found in configuration")
+
+
+def _get_llm_class(provider: str, secrets_path: str = "mcp_agent.secrets.yaml") -> Type[Any]:
     """Lazily import and return the LLM class for a given provider."""
     if provider == "anthropic":
         from mcp_agent.workflows.llm.augmented_llm_anthropic import (
@@ -109,6 +132,9 @@ def _get_llm_class(provider: str) -> Type[Any]:
         return GoogleAugmentedLLM
     elif provider == "openrouter":
         # OpenRouter uses OpenAI-compatible API
+        # Configure environment variables for OpenRouter
+        _configure_openrouter_env(secrets_path)
+        
         from mcp_agent.workflows.llm.augmented_llm_openai import OpenAIAugmentedLLM
 
         return OpenAIAugmentedLLM
@@ -160,7 +186,7 @@ def get_preferred_llm_class(config_path: str = "mcp_agent.secrets.yaml") -> Type
             api_key, class_name = provider_keys[preferred_provider]
             if api_key:
                 print(f"🤖 Using {class_name} (user preference: {preferred_provider})")
-                return _get_llm_class(preferred_provider)
+                return _get_llm_class(preferred_provider, config_path)
             else:
                 print(
                     f"⚠️ Preferred provider '{preferred_provider}' has no API key, checking alternatives..."
@@ -170,11 +196,11 @@ def get_preferred_llm_class(config_path: str = "mcp_agent.secrets.yaml") -> Type
         for provider, (api_key, class_name) in provider_keys.items():
             if api_key:
                 print(f"🤖 Using {class_name} ({provider} API key found)")
-                return _get_llm_class(provider)
+                return _get_llm_class(provider, config_path)
 
         # No API keys found - default to google
         print("⚠️ No API keys configured, falling back to GoogleAugmentedLLM")
-        return _get_llm_class("google")
+        return _get_llm_class("google", config_path)
 
     except Exception as e:
         print(f"🤖 Error reading config file {config_path}: {e}")
@@ -318,6 +344,82 @@ def _get_fallback_models():
         "openrouter_planning": openrouter,
         "openrouter_implementation": openrouter,
     }
+
+
+def get_llm_factories(config_path: str = "mcp_agent.secrets.yaml") -> Tuple[Type[Any], Type[Any], str, str]:
+    """
+    Get separate LLM factories for planning and implementation tasks.
+    
+    Planning model: Used for analysis, extraction, and non-coding tasks
+    Implementation model: Used for code generation tasks only
+    
+    Args:
+        config_path: Path to the secrets YAML configuration file
+        
+    Returns:
+        Tuple of (planning_factory, implementation_factory, planning_model, implementation_model)
+        where planning_factory and implementation_factory are the same LLM class
+        but planning_model and implementation_model are different model names
+    """
+    # Get the LLM class (same for both, just different model)
+    llm_class = get_preferred_llm_class(config_path)
+    
+    # Get model names from config
+    models = get_default_models()
+    
+    # Read user preference from main config
+    main_config_path = "mcp_agent.config.yaml"
+    preferred_provider = "openrouter"  # default
+    if os.path.exists(main_config_path):
+        with open(main_config_path, "r", encoding="utf-8") as f:
+            main_config = yaml.safe_load(f)
+            preferred_provider = main_config.get("llm_provider", "openrouter").strip().lower()
+    
+    # Get the appropriate planning and implementation models
+    planning_model = models.get(f"{preferred_provider}_planning", models.get(preferred_provider))
+    implementation_model = models.get(f"{preferred_provider}_implementation", models.get(preferred_provider))
+    
+    print(f"🎯 Model Assignment:")
+    print(f"   Planning model: {planning_model}")
+    print(f"   Implementation model: {implementation_model}")
+    
+    return llm_class, llm_class, planning_model, implementation_model
+
+
+def create_model_specific_factory(llm_class: Type[Any], model_name: str):
+    """
+    Create a factory function that creates LLM instances with a specific model.
+    
+    Args:
+        llm_class: The LLM class to instantiate
+        model_name: The model name to use
+        
+    Returns:
+        A factory class that can be used to create LLM instances with the specified model
+    """
+    class ModelSpecificFactory:
+        """Factory that wraps an LLM class with a specific model configuration."""
+        
+        _llm_class = llm_class
+        _model_name = model_name
+        
+        def __init__(self, *args, **kwargs):
+            # Set the model in kwargs if not already specified
+            if 'model' not in kwargs:
+                kwargs['model'] = self._model_name
+            self._instance = self._llm_class(*args, **kwargs)
+        
+        def __getattr__(self, name):
+            return getattr(self._instance, name)
+        
+        @classmethod
+        def get_model_name(cls):
+            return cls._model_name
+    
+    # Copy class methods and attributes
+    ModelSpecificFactory.__name__ = f"{llm_class.__name__}_{model_name.replace('/', '_').replace('-', '_')}"
+    
+    return ModelSpecificFactory
 
 
 def get_document_segmentation_config(

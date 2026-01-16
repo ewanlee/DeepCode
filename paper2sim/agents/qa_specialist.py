@@ -4,12 +4,18 @@ The QA Specialist Agent - Calibration and Verification
 Runs verification tests and calibrates agents to match theoretical predictions.
 """
 
+import os
 import unittest
 import json
 from typing import Dict, Any, List
 from dataclasses import dataclass
 from mcp_agent.agents.agent import Agent
-from paper2sim.prompts.phase3_prompts import THE_QA_SPECIALIST_PROMPT
+from mcp_agent.workflows.llm.augmented_llm import RequestParams
+from paper2sim.prompts.phase3_prompts import (
+    THE_QA_SPECIALIST_PROMPT,
+    THE_QA_DIAGNOSIS_PROMPT,
+    THE_QA_FIX_PROMPT
+)
 
 
 @dataclass
@@ -49,26 +55,53 @@ class TheQASpecialistAgent:
     
     Process:
     1. Run verification tests
-    2. Diagnose failures (calculation, motivation, strategy, probability errors)
-    3. Generate fixes (add tools, modify prompts, add constraints)
+    2. Diagnose failures (calculation, motivation, strategy, probability errors) - PLANNING model
+    3. Generate fixes (add tools, modify prompts, add constraints) - IMPLEMENTATION model
     4. Apply fixes and re-test
     5. Iterate until all tests pass or max iterations reached
+    
+    Model Assignment:
+    - Planning model: Test failure diagnosis and analysis
+    - Implementation model: Code fix generation
     """
     
-    def __init__(self, llm_factory=None, server_names=None):
+    def __init__(
+        self,
+        llm_factory=None,
+        planning_factory=None,
+        implementation_factory=None,
+        server_names=None
+    ):
         """
         Initialize The QA Specialist
         
         Args:
-            llm_factory: LLM factory for agent creation
+            llm_factory: Legacy single LLM factory (used if planning/implementation not specified)
+            planning_factory: LLM factory for diagnosis/analysis tasks
+            implementation_factory: LLM factory for code fix generation
             server_names: MCP servers to use
         """
-        self.llm_factory = llm_factory
+        # Support both legacy single-factory and new dual-factory modes
+        if planning_factory is None:
+            planning_factory = llm_factory
+        if implementation_factory is None:
+            implementation_factory = llm_factory
+            
+        self.planning_factory = planning_factory
+        self.implementation_factory = implementation_factory
         self.server_names = server_names or []
         
-        self.agent = Agent(
-            name="TheQASpecialistAgent",
-            instruction=THE_QA_SPECIALIST_PROMPT,
+        # Agent for diagnosis tasks (uses planning model)
+        self.diagnosis_agent = Agent(
+            name="TheQASpecialistAgent_Diagnosis",
+            instruction=THE_QA_DIAGNOSIS_PROMPT,
+            server_names=self.server_names
+        )
+        
+        # Agent for fix generation tasks (uses implementation model)
+        self.fix_agent = Agent(
+            name="TheQASpecialistAgent_Fix",
+            instruction=THE_QA_FIX_PROMPT,
             server_names=self.server_names
         )
     
@@ -208,7 +241,7 @@ class TheQASpecialistAgent:
         simulation_dir: str
     ) -> Dict[str, Any]:
         """
-        Diagnose why a test failed
+        Diagnose why a test failed using PLANNING model.
         
         Returns:
             diagnosis: {category, issue, evidence, expected}
@@ -226,11 +259,13 @@ Analyze the test failure and categorize it:
 
 Return JSON with diagnosis."""
         
-        async with self.agent:
-            llm = await self.agent.attach_llm(self.llm_factory)
+        print(f"      🔍 Diagnosing failure (planning model)...")
+        async with self.diagnosis_agent:
+            llm = await self.diagnosis_agent.attach_llm(self.planning_factory)
+            params = RequestParams(maxTokens=2000, temperature=0.2)
             result = await llm.generate_str(
                 message=prompt,
-                request_params={"maxTokens": 2000, "temperature": 0.2}
+                request_params=params
             )
         
         return json.loads(self._extract_json(result))
@@ -241,7 +276,7 @@ Return JSON with diagnosis."""
         simulation_dir: str
     ) -> Dict[str, Any]:
         """
-        Generate fix based on diagnosis
+        Generate fix based on diagnosis using IMPLEMENTATION model.
         
         Returns:
             fix: {type, content, target_file}
@@ -258,11 +293,13 @@ Based on the diagnosis, generate appropriate fix:
 
 Return JSON with fix specification."""
         
-        async with self.agent:
-            llm = await self.agent.attach_llm(self.llm_factory)
+        print(f"      💻 Generating fix (implementation model)...")
+        async with self.fix_agent:
+            llm = await self.fix_agent.attach_llm(self.implementation_factory)
+            params = RequestParams(maxTokens=2000, temperature=0.3)
             result = await llm.generate_str(
                 message=prompt,
-                request_params={"maxTokens": 2000, "temperature": 0.3}
+                request_params=params
             )
         
         return json.loads(self._extract_json(result))

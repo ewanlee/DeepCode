@@ -2,6 +2,11 @@
 Paper2Sim Workflow - Complete Pipeline
 
 Orchestrates all phases to convert a paper into a working simulation.
+
+Supports both markdown (.md) and PDF (.pdf) input formats.
+For PDF papers with complex mathematical formulas (common in OR/OM/MS fields),
+uses LLM models with native PDF support (e.g., Gemini via OpenRouter) to
+preserve mathematical notation and formulas.
 """
 
 import os
@@ -26,25 +31,79 @@ class Paper2SimWorkflow:
     2. Architecture: Design code structure (Architect) + Implement code (Engineer)
     3. Verification: Calibrate agents (QA Specialist)
     4. Emergence: Add advanced features (optional)
+    
+    Model Assignment:
+    - Planning model: Used for analysis tasks (Theorist, Architect, Critic analysis, QA diagnosis)
+    - Implementation model: Used for coding tasks (Engineer, Critic test generation, QA fixes)
     """
     
-    def __init__(self, llm_factory, output_base_dir: str = "./paper2sim_output"):
+    def __init__(
+        self, 
+        llm_factory=None,
+        planning_factory=None,
+        implementation_factory=None,
+        planning_model=None,
+        implementation_model=None,
+        output_base_dir: str = "./paper2sim_output"
+    ):
         """
         Initialize Paper2Sim workflow
         
         Args:
-            llm_factory: LLM factory for creating agents
+            llm_factory: Legacy single LLM factory (used if planning/implementation not specified)
+            planning_factory: LLM factory for analysis/planning tasks
+            implementation_factory: LLM factory for code generation tasks
+            planning_model: Specific model name for planning tasks (e.g., "google/gemini-3-pro-preview")
+            implementation_model: Specific model name for coding tasks (e.g., "anthropic/claude-sonnet-4.5")
             output_base_dir: Base directory for output files
         """
-        self.llm_factory = llm_factory
+        # Support both legacy single-factory and new dual-factory modes
+        if planning_factory is None:
+            planning_factory = llm_factory
+        if implementation_factory is None:
+            implementation_factory = llm_factory
+            
+        self.planning_factory = planning_factory
+        self.implementation_factory = implementation_factory
+        self.planning_model = planning_model
+        self.implementation_model = implementation_model
         self.output_base_dir = output_base_dir
         
-        # Initialize agents
-        self.theorist = TheTheoristAgent(llm_factory, server_names=["filesystem", "brave"])
-        self.critic = TheCriticAgent(llm_factory, server_names=["filesystem"])
-        self.architect = TheArchitectAgent(llm_factory, server_names=[])
-        self.engineer = TheEngineerAgent(llm_factory, server_names=["code-implementation"])
-        self.qa_specialist = TheQASpecialistAgent(llm_factory, server_names=[])
+        # Initialize agents with appropriate factories AND model names
+        # Theorist: Analysis only → planning_factory + planning_model
+        self.theorist = TheTheoristAgent(
+            planning_factory, 
+            server_names=["filesystem", "brave"],
+            model_name=planning_model
+        )
+        
+        # Critic: Both analysis and coding → both factories + model names
+        self.critic = TheCriticAgent(
+            planning_factory=planning_factory,
+            implementation_factory=implementation_factory,
+            server_names=["filesystem"],
+            planning_model=planning_model,
+            implementation_model=implementation_model
+        )
+        
+        # Architect: Analysis only → planning_factory
+        self.architect = TheArchitectAgent(
+            planning_factory, 
+            server_names=[]
+        )
+        
+        # Engineer: Coding only → implementation_factory
+        self.engineer = TheEngineerAgent(
+            implementation_factory, 
+            server_names=["code-implementation"]
+        )
+        
+        # QA Specialist: Both diagnosis and fixes → both factories
+        self.qa_specialist = TheQASpecialistAgent(
+            planning_factory=planning_factory,
+            implementation_factory=implementation_factory,
+            server_names=[]
+        )
     
     async def run_full_pipeline(
         self,
@@ -56,7 +115,9 @@ class Paper2SimWorkflow:
         Run complete Paper2Sim pipeline
         
         Args:
-            paper_path: Path to research paper (markdown)
+            paper_path: Path to research paper (.md or .pdf)
+                       PDF support enables direct processing of papers with
+                       complex mathematical notation using models like Gemini
             project_name: Name for output directory
             enable_phase4: Enable advanced emergence features
         

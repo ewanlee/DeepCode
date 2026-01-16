@@ -404,16 +404,30 @@ bocha-mcp:
 
 ### 🚀 **运行Paper2Sim**
 
+#### **支持格式**
+
+Paper2Sim 支持两种输入格式：
+- **Markdown (`.md`)**: 适合纯文本论文或已转换的论文
+- **PDF (`.pdf`)**: ⭐ **推荐用于数学公式密集的OR/OM/MS论文**
+  - 直接使用支持PDF的模型（如Gemini）处理
+  - 保留原始数学符号、公式和希腊字母
+  - 无需手动转换为文本
+
 ```bash
-# 基本使用
+# 使用Markdown文件
 python -m paper2sim.main --paper path/to/paper.md
 
+# 使用PDF文件（推荐用于数学论文）
+python -m paper2sim.main --paper path/to/paper.pdf
+
 # 指定输出目录
-python -m paper2sim.main --paper paper.md --output ./simulations --name physician_sim
+python -m paper2sim.main --paper paper.pdf --output ./simulations --name my_sim
 
 # 启用阶段4特性（校准后！）
-python -m paper2sim.main --paper paper.md --phase4
+python -m paper2sim.main --paper paper.pdf --phase4
 ```
+
+> 💡 **PDF支持说明**: 使用PDF输入时，系统会自动使用支持PDF的模型（如 `google/gemini-2.0-flash-exp`）直接处理文件，确保数学公式的准确提取。详见 [PDF支持文档](paper2sim/PDF_SUPPORT.md)
 
 ### 📝 **编程方式使用**
 
@@ -427,9 +441,9 @@ workflow = Paper2SimWorkflow(
     output_base_dir="./paper2sim_output"
 )
 
-# 运行流水线
+# 运行流水线（支持 .md 或 .pdf 文件）
 results = await workflow.run_full_pipeline(
-    paper_path="papers/physician_testing.md",
+    paper_path="papers/physician_testing.pdf",  # 或 .md 文件
     project_name="physician_sim",
     enable_phase4=False  # 从校准开始
 )

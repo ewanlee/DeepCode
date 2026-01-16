@@ -7,6 +7,7 @@ Implements the simulation code based on The Architect's design.
 import os
 from typing import Dict, Any
 from mcp_agent.agents.agent import Agent
+from mcp_agent.workflows.llm.augmented_llm import RequestParams
 from paper2sim.prompts.phase2_prompts import THE_ENGINEER_PROMPT
 
 
@@ -20,6 +21,8 @@ class TheEngineerAgent:
     - runner.py (simulation orchestration)
     - config.py (parameters)
     - main.py (entry point)
+    
+    Model Assignment: Uses IMPLEMENTATION model (code generation only)
     """
     
     def __init__(self, llm_factory=None, server_names=None):
@@ -27,10 +30,13 @@ class TheEngineerAgent:
         Initialize The Engineer
         
         Args:
-            llm_factory: LLM factory for agent creation
+            llm_factory: LLM factory for agent creation (should be implementation_factory)
             server_names: MCP servers to use
+        
+        Note: This agent performs code generation only, no analysis.
+              Should use the implementation_model for best results.
         """
-        self.llm_factory = llm_factory
+        self.llm_factory = llm_factory  # Implementation model for code generation
         self.server_names = server_names or ["code-implementation"]
         
         self.agent = Agent(
@@ -102,13 +108,15 @@ Requirements:
             # Set workspace to output directory
             await self.agent.call_tool("set_workspace", {"workspace_path": output_dir})
             
+            params = RequestParams(
+                maxTokens=16000,
+                temperature=0.2,
+                max_iterations=20,  # Allow multiple tool calls
+            )
+            
             result = await llm.generate_str(
                 message=prompt,
-                request_params={
-                    "maxTokens": 16000,
-                    "temperature": 0.2,
-                    "max_iterations": 20,  # Allow multiple tool calls
-                }
+                request_params=params
             )
         
         # Collect generated files

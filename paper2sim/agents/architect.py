@@ -7,6 +7,7 @@ Designs the code architecture for the hybrid OR/LLM simulation.
 import json
 from typing import Dict, Any
 from mcp_agent.agents.agent import Agent
+from mcp_agent.workflows.llm.augmented_llm import RequestParams
 from paper2sim.prompts.phase2_prompts import THE_ARCHITECT_PROMPT
 
 
@@ -19,6 +20,8 @@ class TheArchitectAgent:
     - Agent class structure (gray-box, LLM-powered)
     - Integration patterns
     - File structure
+    
+    Model Assignment: Uses PLANNING model (architecture design, no coding)
     """
     
     def __init__(self, llm_factory=None, server_names=None):
@@ -26,10 +29,13 @@ class TheArchitectAgent:
         Initialize The Architect
         
         Args:
-            llm_factory: LLM factory for agent creation
+            llm_factory: LLM factory for agent creation (should be planning_factory)
             server_names: MCP servers to use
+        
+        Note: This agent performs architecture design only, no code generation.
+              Should use the planning_model for best results.
         """
-        self.llm_factory = llm_factory
+        self.llm_factory = llm_factory  # Planning model for architecture design
         self.server_names = server_names or []
         
         self.agent = Agent(
@@ -78,12 +84,14 @@ Return complete architecture specification as JSON."""
         async with self.agent:
             llm = await self.agent.attach_llm(self.llm_factory)
             
+            params = RequestParams(
+                maxTokens=6000,
+                temperature=0.3,
+            )
+            
             result = await llm.generate_str(
                 message=prompt,
-                request_params={
-                    "maxTokens": 6000,
-                    "temperature": 0.3,
-                }
+                request_params=params
             )
         
         # Parse architecture spec
