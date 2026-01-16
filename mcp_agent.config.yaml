@@ -103,9 +103,9 @@ mcp:
       env:
         PYTHONPATH: .
 # LLM Provider Priority (选择使用哪个LLM / Choose which LLM to use)
-# Options: "anthropic", "google", "openai"
+# Options: "anthropic", "google", "openai", "openrouter"
 # If not set or provider unavailable, will fallback to first available provider
-llm_provider: "google"  # 设置为 "google", "anthropic", 或 "openai"
+llm_provider: "openrouter"  # 设置为 "google", "anthropic", "openai", 或 "openrouter"
 
 openai:
   base_max_tokens: 40000
@@ -135,5 +135,18 @@ openai:
   default_model: "o3-mini"
   planning_model: "o3-mini"
   implementation_model: "gpt-4o"
+
+# OpenRouter configuration (unified gateway to multiple LLM providers)
+# Use OpenRouter model format: provider/model-name
+# Examples: "anthropic/claude-sonnet-4", "google/gemini-2.0-flash-exp", "openai/gpt-4o"
+# Get API key from: https://openrouter.ai/keys
+openrouter:
+  base_url: "https://openrouter.ai/api/v1"
+  default_model: "anthropic/claude-sonnet-4"
+  planning_model: "anthropic/claude-sonnet-4"
+  implementation_model: "google/gemini-2.0-flash-exp"
+  # Optional: Set site URL and app name for OpenRouter rankings
+  # site_url: "https://yourapp.com"
+  # app_name: "YourApp"
 
 planning_mode: traditional

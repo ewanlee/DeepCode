@@ -71,3 +71,6 @@ deepcode_lab/
 
 # secrets (use .env or environment variables instead)
 mcp_agent.secrets.yaml
+
+# Documentation files (not tracked by git)
+代码逻辑说明文档.md

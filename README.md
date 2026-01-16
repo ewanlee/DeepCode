@@ -3,46 +3,33 @@
 <table style="border: none; margin: 0 auto; padding: 0; border-collapse: collapse;">
 <tr>
 <td align="center" style="vertical-align: middle; padding: 10px; border: none; width: 250px;">
-  <img src="assets/logo.png" alt="DeepCode Logo" width="200" style="margin: 0; padding: 0; display: block;"/>
+  <img src="assets/logo.png" alt="Paper2Sim Logo" width="200" style="margin: 0; padding: 0; display: block;"/>
 </td>
 <td align="left" style="vertical-align: middle; padding: 10px 0 10px 30px; border: none;">
-  <pre style="font-family: 'Courier New', monospace; font-size: 16px; color: #0EA5E9; margin: 0; padding: 0; text-shadow: 0 0 10px #0EA5E9, 0 0 20px rgba(14,165,233,0.5); line-height: 1.2; transform: skew(-1deg, 0deg); display: block;">    ██████╗ ███████╗███████╗██████╗  ██████╗ ██████╗ ██████╗ ███████╗
-    ██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝██╔═══██╗██╔══██╗██╔════╝
-    ██║  ██║█████╗  █████╗  ██████╔╝██║     ██║   ██║██║  ██║█████╗
-    ██║  ██║██╔══╝  ██╔══╝  ██╔═══╝ ██║     ██║   ██║██║  ██║██╔══╝
-    ██████╔╝███████╗███████╗██║     ╚██████╗╚██████╔╝██████╔╝███████╗
-    ╚═════╝ ╚══════╝╚══════╝╚═╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝</pre>
+  <pre style="font-family: 'Courier New', monospace; font-size: 16px; color: #0EA5E9; margin: 0; padding: 0; text-shadow: 0 0 10px #0EA5E9, 0 0 20px rgba(14,165,233,0.5); line-height: 1.2; transform: skew(-1deg, 0deg); display: block;">    ██████╗  █████╗ ██████╗ ███████╗██████╗ ██████╗ ███████╗██╗███╗   ███╗
+    ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗╚════██╗██╔════╝██║████╗ ████║
+    ██████╔╝███████║██████╔╝█████╗  ██████╔╝ █████╔╝███████╗██║██╔████╔██║
+    ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗██╔═══╝ ╚════██║██║██║╚██╔╝██║
+    ██║     ██║  ██║██║     ███████╗██║  ██║███████╗███████║██║██║ ╚═╝ ██║
+    ╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝     ╚═╝</pre>
 </td>
 </tr>
 </table>
 
-<div align="center">
-<a href="https://trendshift.io/repositories/14665" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14665" alt="HKUDS%2FDeepCode | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</div>
+# Paper2Sim: Hybrid OR/LLM Simulation Engine
 
-<!-- <img src="https://readme-typing-svg.herokuapp.com?font=Russo+One&size=28&duration=2000&pause=800&color=06B6D4&background=00000000&center=true&vCenter=true&width=800&height=50&lines=%E2%9A%A1+OPEN+AGENTIC+CODING+%E2%9A%A1" alt="DeepCode Tech Subtitle" style="margin-top: 5px; filter: drop-shadow(0 0 12px #06B6D4) drop-shadow(0 0 24px rgba(6,182,212,0.4));"/> -->
+### *Transform Game Theory Papers into High-Fidelity Agent Simulations*
 
-# <img src="https://github.com/Zongwei9888/Experiment_Images/raw/43c585dca3d21b8e4b6390d835cdd34dc4b4b23d/DeepCode_images/title_logo.svg" alt="DeepCode Logo" width="32" height="32" style="vertical-align: middle; margin-right: 8px;"/> DeepCode: Open Agentic Coding
-
-### *Advancing Code Generation with Multi-Agent Systems*
-
-<!-- <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.0.0-00d4ff?style=for-the-badge&logo=rocket&logoColor=white" alt="Version">
-
-  <img src="https://img.shields.io/badge/License-MIT-4ecdc4?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License">
-  <img src="https://img.shields.io/badge/AI-Multi--Agent-9b59b6?style=for-the-badge&logo=brain&logoColor=white" alt="AI">
-  <img src="https://img.shields.io/badge/HKU-Data_Intelligence_Lab-f39c12?style=for-the-badge&logo=university&logoColor=white" alt="HKU">
-</p> -->
 <p>
   <a href="https://github.com/HKUDS/DeepCode/stargazers"><img src='https://img.shields.io/github/stars/HKUDS/DeepCode?color=00d9ff&style=for-the-badge&logo=star&logoColor=white&labelColor=1a1a2e' /></a>
-  <a href='https://arxiv.org/abs/2512.07921'><img src="https://img.shields.io/badge/Paper-arXiv-orange?style=for-the-badge&logo=arxiv&logoColor=white&labelColor=1a1a2e"></a>
-  <img src="https://img.shields.io/badge/🐍Python-3.13-4ecdc4?style=for-the-badge&logo=python&logoColor=white&labelColor=1a1a2e">
-  <!-- <a href="https://pypi.org/project/deepcode-hku/"><img src="https://img.shields.io/pypi/v/deepcode-hku.svg?style=for-the-badge&logo=pypi&logoColor=white&labelColor=1a1a2e&color=ff6b6b"></a> -->
+  <img src="https://img.shields.io/badge/🐍Python-3.10+-4ecdc4?style=for-the-badge&logo=python&logoColor=white&labelColor=1a1a2e">
+  <img src="https://img.shields.io/badge/Branch-paper2sim-ff6b6b?style=for-the-badge&logo=git&logoColor=white&labelColor=1a1a2e">
 </p>
 <p>
   <a href="https://discord.gg/yF2MmDJyGJ"><img src="https://img.shields.io/badge/💬Discord-Community-7289da?style=for-the-badge&logo=discord&logoColor=white&labelColor=1a1a2e"></a>
   <a href="https://github.com/HKUDS/DeepCode/issues/11"><img src="https://img.shields.io/badge/💬WeChat-Group-07c160?style=for-the-badge&logo=wechat&logoColor=white&labelColor=1a1a2e"></a>
 </p>
+
 <div align="center">
   <div style="width: 100%; height: 2px; margin: 20px 0; background: linear-gradient(90deg, transparent, #00d9ff, transparent);"></div>
 </div>
@@ -62,80 +49,7 @@
   </a>
 </div>
 
-### 🖥️ **Interface Showcase**
-
-<table align="center" width="100%" style="border: none; border-collapse: collapse; margin: 30px 0;">
-<tr>
-<td width="50%" align="center" style="vertical-align: top; padding: 20px;">
-
-#### 🖥️ **CLI Interface**
-**Terminal-Based Development**
-
-<div align="center">
-
-  <img src="https://github.com/Zongwei9888/Experiment_Images/blob/8882a7313c504ca97ead6e7b36c51aa761b6a4f3/DeepCode_images/CLI.gif" alt="CLI Interface Demo" width="100%" style="border-radius: 10px; box-shadow: 0 8px 20px rgba(45,55,72,0.3); margin: 15px 0;"/>
-
-  <div style="background: linear-gradient(135deg, #2D3748 0%, #4A5568 100%); border-radius: 12px; padding: 15px; margin: 15px 0; color: white;">
-    <strong>🚀 Advanced Terminal Experience</strong><br/>
-    <small>⚡ Fast command-line workflow<br/>🔧 Developer-friendly interface<br/>📊 Real-time progress tracking</small>
-  </div>
-
-  *Professional terminal interface for advanced users and CI/CD integration*
-</div>
-
-</td>
-<td width="50%" align="center" style="vertical-align: top; padding: 20px;">
-
-#### 🌐 **Web Interface**
-**Visual Interactive Experience**
-
-<div align="center">
-
-  <img src="https://github.com/Zongwei9888/Experiment_Images/raw/8882a7313c504ca97ead6e7b36c51aa761b6a4f3/DeepCode_images/UI.gif" alt="Web Interface Demo" width="100%" style="border-radius: 10px; box-shadow: 0 8px 20px rgba(14,165,233,0.3); margin: 15px 0;"/>
-
-  <div style="background: linear-gradient(135deg, #0EA5E9 0%, #00D4FF 100%); border-radius: 12px; padding: 15px; margin: 15px 0; color: white;">
-    <strong>🎨 Modern Web Dashboard</strong><br/>
-    <small>🖱️ Intuitive drag-and-drop<br/>📱 Responsive design<br/>🎯 Visual progress tracking</small>
-  </div>
-
-  *Beautiful web interface with streamlined workflow for all skill levels*
-</div>
-
-</td>
-</tr>
-</table>
-
----
-
-<div align="center">
-
-### 🎬 **Introduction Video**
-
-<div style="margin: 20px 0;">
-  <a href="https://youtu.be/PRgmP8pOI08" target="_blank">
-    <img src="https://img.youtube.com/vi/PRgmP8pOI08/maxresdefault.jpg"
-         alt="DeepCode Introduction Video"
-         width="75%"
-         style="border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: transform 0.3s ease;"/>
-  </a>
-</div>
-
-*🎯 **Watch our complete introduction** - See how DeepCode transforms research papers and natural language into production-ready code*
-
-<p>
-  <a href="https://youtu.be/PRgmP8pOI08" target="_blank">
-    <img src="https://img.shields.io/badge/▶️_Watch_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Video"/>
-  </a>
-</p>
-
-</div>
-
----
-
-
-
-
-> *"Where AI Agents Transform Ideas into Production-Ready Code"*
+> *"Environment as Law (Math), Agent as Brain (LLM)"*
 
 </div>
 
@@ -143,766 +57,604 @@
 
 ## 📑 Table of Contents
 
-- [📰 News](#-news)
+- [🎯 Project Overview](#-project-overview)
+- [✨ Core Philosophy](#-core-philosophy)
 - [🚀 Key Features](#-key-features)
-- [🏗️ Architecture](#️-architecture)
-- [📊 Experimental Results](#-experimental-results)
-- [🚀 Quick Start](#-quick-start)
-- [💡 Examples](#-examples)
-  - [🎬 Live Demonstrations](#-live-demonstrations)
-- [⭐ Star History](#-star-history)
+- [🏗️ Pipeline Architecture](#️-pipeline-architecture)
+- [⚡ Quick Start](#-quick-start)
+- [💡 Usage Examples](#-usage-examples)
+- [📊 Output Structure](#-output-structure)
+- [🎓 Supported Paper Types](#-supported-paper-types)
+- [🔧 Configuration](#-configuration)
 - [📄 License](#-license)
-
 
 ---
 
-## 📰 News
+## 🎯 Project Overview
 
-🎉 **[2025-10] 🎉 [2025-10-28] DeepCode Achieves SOTA on PaperBench!**
+**Paper2Sim** is an automated hybrid simulation engine that converts operations research (OR) and game theory papers into executable agent-based simulations. Unlike traditional stylized mathematical models or black-box LLM simulations, Paper2Sim creates **verifiable, theoretically-grounded simulations** where:
 
-DeepCode sets new benchmarks on OpenAI's PaperBench Code-Dev across all categories:
+- **Mathematical environments** enforce hard constraints (payoffs, state transitions)
+- **LLM agents** exhibit cognitive behavior with bounded rationality
+- **Automatic calibration** ensures agents reproduce theoretical propositions before exploring emergent behavior
 
-- 🏆 **Surpasses Human Experts**: **75.9%** (DeepCode) vs Top Machine Learning PhDs 72.4% (+3.5%).
-- 🥇 **Outperforms SOTA Commercial Code Agents**: **84.8%** (DeepCode) vs Leading Commercial Code Agents (+26.1%) (Cursor, Claude Code, and Codex).
-- 🔬 **Advances Scientific Coding**: **73.5%** (DeepCode) vs PaperCoder 51.1% (+22.4%).
-- 🚀 **Beats LLM Agents**: **73.5%** (DeepCode) vs best LLM frameworks 43.3% (+30.2%).
+### The Challenge
+
+Traditional OR/management science research relies on highly simplified mathematical models that lack behavioral realism. Pure LLM-based social simulations, while behaviorally rich, lack verifiability and logical consistency. **Paper2Sim bridges this gap.**
+
+### Our Solution
+
+A multi-phase pipeline that:
+1. **Extracts** game-theoretic models from papers
+2. **Implements** white-box environments and gray-box LLM agents
+3. **Calibrates** agents to match theoretical predictions
+4. **Explores** emergent phenomena with memory, language, and adversarial testing
+
+---
+
+## ✨ Core Philosophy
+
+### 🎯 Three Design Principles
+
+#### 1. **Environment as Law (White-Box)**
+- State transitions and payoffs are **deterministic Python code**
+- Directly mapped from paper equations
+- LLMs cannot "imagine" rewards—they can only "perceive" them
+
+#### 2. **Rationality First (Calibration)**
+- Agents must pass a "Turing test" for game understanding
+- At Temperature=0, agents reproduce paper Propositions
+- Advanced features (memory, emotion) only enabled after calibration
+
+#### 3. **Cognitive Layering (Gray-Box Agents)**
+- Start with pure theory (rational agents)
+- Progressively add: memory → framing effects → adversarial probing
+- Observe system emergence while maintaining theoretical grounding
 
 ---
 
 ## 🚀 Key Features
 
-<br/>
-
 <table align="center" width="100%" style="border: none; table-layout: fixed;">
 <tr>
-<td width="30%" align="center" style="vertical-align: top; padding: 20px;">
+<td width="33%" align="center" style="vertical-align: top; padding: 20px;">
 
-<div style="height: 80px; display: flex; align-items: center; justify-content: center;">
-<h3 style="margin: 0; padding: 0;">🚀 <strong>Paper2Code</strong></h3>
-</div>
+### 🧬 **Automatic Model Extraction**
 
-<div align="center" style="margin: 15px 0;">
-  <img src="https://img.shields.io/badge/ALGORITHM-IMPLEMENTATION-ff6b6b?style=for-the-badge&logo=algorithm&logoColor=white" alt="Algorithm Badge" />
-</div>
-
-<div style="height: 80px; display: flex; align-items: center; justify-content: center;">
-<p align="center"><strong>Automated Implementation of Complex Algorithms</strong></p>
-</div>
-
-<div style="height: 60px; display: flex; align-items: center; justify-content: center;">
-<p align="center">Effortlessly converts complex algorithms from research papers into <strong>high-quality</strong>, <strong>production-ready</strong> code, accelerating algorithm reproduction.</p>
-</div>
-
-
+Extract game structure `<N, S, A, U>` from PDF/Markdown papers:
+- Players and roles
+- State variables
+- Action spaces
+- Utility functions
 
 </td>
-<td width="30%" align="center" style="vertical-align: top; padding: 20px;">
+<td width="33%" align="center" style="vertical-align: top; padding: 20px;">
 
-<div style="height: 80px; display: flex; align-items: center; justify-content: center;">
-<h3 style="margin: 0; padding: 0;">🎨 <strong>Text2Web</strong></h3>
-</div>
+### 🏗️ **Architecture Generation**
 
-<div align="center" style="margin: 15px 0;">
-  <img src="https://img.shields.io/badge/FRONTEND-DEVELOPMENT-4ecdc4?style=for-the-badge&logo=react&logoColor=white" alt="Frontend Badge" />
-</div>
-
-<div style="height: 80px; display: flex; align-items: center; justify-content: center;">
-<p align="center"><strong>Automated Front-End Web Development</strong></p>
-</div>
-
-<div style="height: 60px; display: flex; align-items: center; justify-content: center;">
-<p align="center">Translates plain textual descriptions into <strong>fully functional</strong>, <strong>visually appealing</strong> front-end web code for rapid interface creation.</p>
-</div>
-
-
+Produces clean separation:
+- `environment.py` (math only)
+- `agents.py` (LLM-powered)
+- `runner.py` (orchestration)
+- `tests/` (verification suite)
 
 </td>
-<td width="30%" align="center" style="vertical-align: top; padding: 20px;">
+<td width="33%" align="center" style="vertical-align: top; padding: 20px;">
 
-<div style="height: 80px; display: flex; align-items: center; justify-content: center;">
-<h3 style="margin: 0; padding: 0;">⚙️ <strong>Text2Backend</strong></h3>
-</div>
+### ✅ **Automatic Calibration**
 
-<div align="center" style="margin: 15px 0;">
-  <img src="https://img.shields.io/badge/BACKEND-DEVELOPMENT-9b59b6?style=for-the-badge&logo=server&logoColor=white" alt="Backend Badge" />
-</div>
+Closed-loop debugging:
+- Converts Propositions → unit tests
+- Diagnoses failures (calculation, motivation, etc.)
+- Auto-fixes prompts until calibrated
 
-<div style="height: 80px; display: flex; align-items: center; justify-content: center;">
-<p align="center"><strong>Automated Back-End Development</strong></p>
-</div>
+</td>
+</tr>
+<tr>
+<td width="33%" align="center" style="vertical-align: top; padding: 20px;">
 
-<div style="height: 60px; display: flex; align-items: center; justify-content: center;">
-<p align="center">Generates <strong>efficient</strong>, <strong>scalable</strong>, and <strong>feature-rich</strong> back-end code from simple text inputs, streamlining server-side development.</p>
-</div>
+### 🧠 **Long-Term Memory**
 
+ChromaDB-backed episodic memory:
+- Path-dependent behavior
+- Trust dynamics
+- Professional burnout modeling
 
+</td>
+<td width="33%" align="center" style="vertical-align: top; padding: 20px;">
+
+### 💬 **Strategic Communication**
+
+Natural language layer:
+- Framing effects (gain vs loss)
+- Deception detection
+- Rhetorical manipulation
+
+</td>
+<td width="33%" align="center" style="vertical-align: top; padding: 20px;">
+
+### 🔴 **Red Team Testing**
+
+Adversarial mechanism probing:
+- Exploit discovery
+- Goodhart's Law detection
+- Robustness analysis reports
 
 </td>
 </tr>
 </table>
 
-<br/>
-
 ---
 
-## 📊 Experimental Results
+## 🏗️ Pipeline Architecture
 
-<div align="center">
-    <img src='./assets/result_main02.jpg' /><br>
-</div>
-<br/>
-
-We evaluate **DeepCode** on the [*PaperBench*](https://openai.com/index/paperbench/) benchmark (released by OpenAI), a rigorous testbed requiring AI agents to independently reproduce 20 ICML 2024 papers from scratch. The benchmark comprises 8,316 gradable components assessed using SimpleJudge with hierarchical weighting.
-
-Our experiments compare DeepCode against four baseline categories: **(1) Human Experts**, **(2) State-of-the-Art Commercial Code Agents**, **(3) Scientific Code Agents**, and **(4) LLM-Based Agents**.
-
-### ① 🧠 Human Expert Performance (Top Machine Learning PhD)
-
-**DeepCode: 75.9% vs. Top Machine Learning PhD: 72.4% (+3.5%)**
-
-DeepCode achieves **75.9%** on the 3-paper human evaluation subset, **surpassing the best-of-3 human expert baseline (72.4%) by +3.5 percentage points**. This demonstrates that our framework not only matches but exceeds expert-level code reproduction capabilities, representing a significant milestone in autonomous scientific software engineering.
-
-### ② 💼 State-of-the-Art Commercial Code Agents
-
-**DeepCode: 84.8% vs. Best Commercial Agent: 58.7% (+26.1%)**
-
-On the 5-paper subset, DeepCode substantially outperforms leading commercial coding tools:
-- Cursor: 58.4%
-- Claude Code: 58.7%
-- Codex: 40.0%
-- **DeepCode: 84.8%**
-
-This represents a **+26.1% improvement** over the leading commercial code agent. All commercial agents utilize Claude Sonnet 4.5 or GPT-5 Codex-high, highlighting that **DeepCode's superior architecture**—rather than base model capability—drives this performance gap.
-
-### ③ 🔬 Scientific Code Agents
-
-**DeepCode: 73.5% vs. PaperCoder: 51.1% (+22.4%)**
-
-Compared to PaperCoder (**51.1%**), the state-of-the-art scientific code reproduction framework, DeepCode achieves **73.5%**, demonstrating a **+22.4% relative improvement**. This substantial margin validates our multi-module architecture combining planning, hierarchical task decomposition, code generation, and iterative debugging over simpler pipeline-based approaches.
-
-### ④ 🤖 LLM-Based Agents
-
-**DeepCode: 73.5% vs. Best LLM Agent: 43.3% (+30.2%)**
-
-DeepCode significantly outperforms all tested LLM agents:
-- Claude 3.5 Sonnet + IterativeAgent: 27.5%
-- o1 + IterativeAgent (36 hours): 42.4%
-- o1 BasicAgent: 43.3%
-- **DeepCode: 73.5%**
-
-The **+30.2% improvement** over the best-performing LLM agent demonstrates that sophisticated agent scaffolding, rather than extended inference time or larger models, is critical for complex code reproduction tasks.
-
----
-
-### 🎯 **Autonomous Self-Orchestrating Multi-Agent Architecture**
-
-**The Challenges**:
-
-- 📄 **Implementation Complexity**: Converting academic papers and complex algorithms into working code requires significant technical effort and domain expertise
-
-- 🔬 **Research Bottleneck**: Researchers spend valuable time implementing algorithms instead of focusing on their core research and discovery work
-
-- ⏱️ **Development Delays**: Product teams experience long wait times between concept and testable prototypes, slowing down innovation cycles
-
-- 🔄 **Repetitive Coding**: Developers repeatedly implement similar patterns and functionality instead of building on existing solutions
-
-**DeepCode** addresses these workflow inefficiencies by providing reliable automation for common development tasks, streamlining your development workflow from concept to code.
-
-<div align="center">
+### 🌟 **Four-Phase Workflow**
 
 ```mermaid
-flowchart LR
-    A["📄 Research Papers<br/>💬 Text Prompts<br/>🌐 URLs & Document<br/>📎 Files: PDF, DOC, PPTX, TXT, HTML"] --> B["🧠 DeepCode<br/>Multi-Agent Engine"]
-    B --> C["🚀 Algorithm Implementation <br/>🎨 Frontend Development <br/>⚙️ Backend Development"]
-
-    style A fill:#ff6b6b,stroke:#c0392b,stroke-width:2px,color:#000
-    style B fill:#00d4ff,stroke:#0984e3,stroke-width:3px,color:#000
-    style C fill:#00b894,stroke:#00a085,stroke-width:2px,color:#000
+flowchart TB
+    A[📄 Research Paper] --> B[Phase 1: Deconstruction]
+    B --> C[Phase 2: Architecture & Coding]
+    C --> D[Phase 3: Verification & Calibration]
+    D --> E{Calibrated?}
+    E -->|Yes| F[Phase 4: Advanced Features]
+    E -->|No| G[Debug & Fix]
+    G --> D
+    F --> H[🎯 Production Simulation]
+    
+    style A fill:#667eea,stroke:#5a67d8,color:#fff
+    style B fill:#ff6b6b,stroke:#ee5a24,color:#fff
+    style C fill:#00d2d3,stroke:#00a8cc,color:#fff
+    style D fill:#26de81,stroke:#20bf6b,color:#fff
+    style E fill:#ffa502,stroke:#ff7f50,color:#fff
+    style F fill:#e056fd,stroke:#d63aff,color:#fff
+    style H fill:#045de9,stroke:#0984e3,color:#fff
 ```
 
-</div>
-
----
-
-## 🏗️ Architecture
-
-### 📊 **System Overview**
-
-**DeepCode** is an AI-powered development platform that automates code generation and implementation tasks. Our multi-agent system handles the complexity of translating requirements into functional, well-structured code, allowing you to focus on innovation rather than implementation details.
-
-🎯 **Technical Capabilities**:
-
-🧬 **Research-to-Production Pipeline**<br>
-Multi-modal document analysis engine that extracts algorithmic logic and mathematical models from academic papers. Generates optimized implementations with proper data structures while preserving computational complexity characteristics.
-
-🪄 **Natural Language Code Synthesis**<br>
-Context-aware code generation using fine-tuned language models trained on curated code repositories. Maintains architectural consistency across modules while supporting multiple programming languages and frameworks.
-
-⚡ **Automated Prototyping Engine**<br>
-Intelligent scaffolding system generating complete application structures including database schemas, API endpoints, and frontend components. Uses dependency analysis to ensure scalable architecture from initial generation.
-
-💎 **Quality Assurance Automation**<br>
-Integrated static analysis with automated unit test generation and documentation synthesis. Employs AST analysis for code correctness and property-based testing for comprehensive coverage.
-
-🔮 **CodeRAG Integration System**<br>
-Advanced retrieval-augmented generation combining semantic vector embeddings with graph-based dependency analysis. Automatically discovers optimal libraries and implementation patterns from large-scale code corpus.
-
----
-
-### 🔧 **Core Techniques**
-
-- 🧠 **Intelligent Orchestration Agent**: Central decision-making system that coordinates workflow phases and analyzes requirements. Employs dynamic planning algorithms to adapt execution strategies in real-time based on evolving project complexity. Dynamically selects optimal processing strategies for each implementation step. <br>
-
-- 💾 **Efficient Memory Mechanism**: Advanced context engineering system that manages large-scale code contexts efficiently. Implements hierarchical memory structures with intelligent compression for handling complex codebases. This component enables instant retrieval of implementation patterns and maintains semantic coherence across extended development sessions. <br>
-
-- 🔍 **Advanced CodeRAG System**: Global code comprehension engine that analyzes complex inter-dependencies across repositories. Performs cross-codebase relationship mapping to understand architectural patterns from a holistic perspective. This module leverages dependency graphs and semantic analysis to provide globally-aware code recommendations during implementation.
-
----
-
-### 🤖 **Multi-Agent Architecture of DeepCode**:
-
-- **🎯 Central Orchestrating Agent**: Orchestrates entire workflow execution and makes strategic decisions. Coordinates specialized agents based on input complexity analysis. Implements dynamic task planning and resource allocation algorithms. <br>
-
-- **📝 Intent Understanding Agent**: Performs deep semantic analysis of user requirements to decode complex intentions. Extracts functional specifications and technical constraints through advanced NLP processing. Transforms ambiguous human descriptions into precise, actionable development specifications with structured task decomposition. <br>
-
-- **📄 Document Parsing Agent**: Processes complex technical documents and research papers with advanced parsing capabilities. Extracts algorithms and methodologies using document understanding models. Converts academic concepts into practical implementation specifications through intelligent content analysis. <br>
-
-- **🏗️ Code Planning Agent**: Performs architectural design and technology stack optimization. Dynamic planning for adaptive development roadmaps. Enforces coding standards and generates modular structures through automated design pattern selection.<br>
-
-- **🔍 Code Reference Mining Agent**: Discovers relevant repositories and frameworks through intelligent search algorithms. Analyzes codebases for compatibility and integration potential. Provides recommendations based on similarity metrics and automated dependency analysis. <br>
-
-- **📚 Code Indexing Agent**: Builds comprehensive knowledge graphs of discovered codebases. Maintains semantic relationships between code components. Enables intelligent retrieval and cross-reference capabilities. <br>
-
-- **🧬 Code Generation Agent**: Synthesizes gathered information into executable code implementations. Creates functional interfaces and integrates discovered components. Generates comprehensive test suites and documentation for reproducibility.
-
----
-
-#### 🛠️ **Implementation Tools Matrix**
-
-**🔧 Powered by MCP (Model Context Protocol)**
-
-DeepCode leverages the **Model Context Protocol (MCP)** standard to seamlessly integrate with various tools and services. This standardized approach ensures reliable communication between AI agents and external systems, enabling powerful automation capabilities.
-
-##### 📡 **MCP Servers & Tools**
-
-| 🛠️ **MCP Server** | 🔧 **Primary Function** | 💡 **Purpose & Capabilities** |
-|-------------------|-------------------------|-------------------------------|
-| **🔍 brave** | Web Search Engine | Real-time information retrieval via Brave Search API |
-| **🌐 bocha-mcp** | Alternative Search | Secondary search option with independent API access |
-| **📂 filesystem** | File System Operations | Local file and directory management, read/write operations |
-| **🌐 fetch** | Web Content Retrieval | Fetch and extract content from URLs and web resources |
-| **📥 github-downloader** | Repository Management | Clone and download GitHub repositories for analysis |
-| **📋 file-downloader** | Document Processing | Download and convert files (PDF, DOCX, etc.) to Markdown |
-| **⚡ command-executor** | System Commands | Execute bash/shell commands for environment management |
-| **🧬 code-implementation** | Code Generation Hub | Comprehensive code reproduction with execution and testing |
-| **📚 code-reference-indexer** | Smart Code Search | Intelligent indexing and search of code repositories |
-| **📄 document-segmentation** | Smart Document Analysis | Intelligent document segmentation for large papers and technical documents |
-
-##### 🔧 **Legacy Tool Functions** *(for reference)*
-
-| 🛠️ **Function** | 🎯 **Usage Context** |
-|-----------------|---------------------|
-| **📄 read_code_mem** | Efficient code context retrieval from memory |
-| **✍️ write_file** | Direct file content generation and modification |
-| **🐍 execute_python** | Python code testing and validation |
-| **📁 get_file_structure** | Project structure analysis and organization |
-| **⚙️ set_workspace** | Dynamic workspace and environment configuration |
-| **📊 get_operation_history** | Process monitoring and operation tracking |
-
-
----
-
-🎛️ **Multi-Interface Framework**<br>
-RESTful API with CLI and web frontends featuring real-time code streaming, interactive debugging, and extensible plugin architecture for CI/CD integration.
-
-**🚀 Multi-Agent Intelligent Pipeline:**
-
-<div align="center">
-
-### 🌟 **Intelligence Processing Flow**
-
-<table align="center" width="100%" style="border: none; border-collapse: collapse;">
-<tr>
-<td colspan="3" align="center" style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white; font-weight: bold;">
-💡 <strong>INPUT LAYER</strong><br/>
-📄 Research Papers • 💬 Natural Language • 🌐 URLs • 📋 Requirements
-</td>
-</tr>
-<tr><td colspan="3" height="20"></td></tr>
-<tr>
-<td colspan="3" align="center" style="padding: 15px; background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); border-radius: 12px; color: white; font-weight: bold;">
-🎯 <strong>CENTRAL ORCHESTRATION</strong><br/>
-Strategic Decision Making • Workflow Coordination • Agent Management
-</td>
-</tr>
-<tr><td colspan="3" height="15"></td></tr>
-<tr>
-<td align="center" style="padding: 12px; background: linear-gradient(135deg, #3742fa 0%, #2f3542 100%); border-radius: 10px; color: white; width: 50%;">
-📝 <strong>TEXT ANALYSIS</strong><br/>
-<small>Requirement Processing</small>
-</td>
-<td width="10"></td>
-<td align="center" style="padding: 12px; background: linear-gradient(135deg, #8c7ae6 0%, #9c88ff 100%); border-radius: 10px; color: white; width: 50%;">
-📄 <strong>DOCUMENT ANALYSIS</strong><br/>
-<small>Paper & Spec Processing</small>
-</td>
-</tr>
-<tr><td colspan="3" height="15"></td></tr>
-<tr>
-<td colspan="3" align="center" style="padding: 15px; background: linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%); border-radius: 12px; color: white; font-weight: bold;">
-📋 <strong>REPRODUCTION PLANNING</strong><br/>
-Deep Paper Analysis • Code Requirements Parsing • Reproduction Strategy Development
-</td>
-</tr>
-<tr><td colspan="3" height="15"></td></tr>
-<tr>
-<td align="center" style="padding: 12px; background: linear-gradient(135deg, #ffa726 0%, #ff7043 100%); border-radius: 10px; color: white; width: 50%;">
-🔍 <strong>REFERENCE ANALYSIS</strong><br/>
-<small>Repository Discovery</small>
-</td>
-<td width="10"></td>
-<td align="center" style="padding: 12px; background: linear-gradient(135deg, #e056fd 0%, #f368e0 100%); border-radius: 10px; color: white; width: 50%;">
-📚 <strong>CODE INDEXING</strong><br/>
-<small>Knowledge Graph Building</small>
-</td>
-</tr>
-<tr><td colspan="3" height="15"></td></tr>
-<tr>
-<td colspan="3" align="center" style="padding: 15px; background: linear-gradient(135deg, #26de81 0%, #20bf6b 100%); border-radius: 12px; color: white; font-weight: bold;">
-🧬 <strong>CODE IMPLEMENTATION</strong><br/>
-Implementation Generation • Testing • Documentation
-</td>
-</tr>
-<tr><td colspan="3" height="15"></td></tr>
-<tr>
-<td colspan="3" align="center" style="padding: 20px; background: linear-gradient(135deg, #045de9 0%, #09c6f9 100%); border-radius: 15px; color: white; font-weight: bold;">
-⚡ <strong>OUTPUT DELIVERY</strong><br/>
-📦 Complete Codebase • 🧪 Test Suite • 📚 Documentation • 🚀 Deployment Ready
-</td>
-</tr>
-</table>
-
-</div>
-
-<div align="center">
-<br/>
-
-### 🔄 **Process Intelligence Features**
-
-<table align="center" style="border: none;">
-<tr>
-<td align="center" width="25%" style="padding: 15px;">
-<div style="background: #f8f9fa; border-radius: 10px; padding: 15px; border-left: 4px solid #ff6b6b;">
-<h4>🎯 Adaptive Flow</h4>
-<p><small>Dynamic agent selection based on input complexity</small></p>
-</div>
-</td>
-<td align="center" width="25%" style="padding: 15px;">
-<div style="background: #f8f9fa; border-radius: 10px; padding: 15px; border-left: 4px solid #4ecdc4;">
-<h4>🧠 Smart Coordination</h4>
-<p><small>Intelligent task distribution and parallel processing</small></p>
-</div>
-</td>
-<td align="center" width="25%" style="padding: 15px;">
-<div style="background: #f8f9fa; border-radius: 10px; padding: 15px; border-left: 4px solid #45b7d1;">
-<h4>🔍 Context Awareness</h4>
-<p><small>Deep understanding through CodeRAG integration</small></p>
-</div>
-</td>
-<td align="center" width="25%" style="padding: 15px;">
-<div style="background: #f8f9fa; border-radius: 10px; padding: 15px; border-left: 4px solid #96ceb4;">
-<h4>⚡ Quality Assurance</h4>
-<p><small>Automated testing and validation throughout</small></p>
-</div>
-</td>
-</tr>
-</table>
-
-</div>
-
----
-
-
-## 🚀 Quick Start
-
-
-
-### 📦 **Step 1: Installation**
-
-#### ⚡ **Direct Installation (Recommended)**
-
-```bash
-# 🚀 Install DeepCode package directly
-pip install deepcode-hku
-
-# 🔑 Download configuration files
-curl -O https://raw.githubusercontent.com/HKUDS/DeepCode/main/mcp_agent.config.yaml
-curl -O https://raw.githubusercontent.com/HKUDS/DeepCode/main/mcp_agent.secrets.yaml
-
-# 🔑 Configure API keys (required)
-# Edit mcp_agent.secrets.yaml with your API keys and base_url:
-# - openai: api_key, base_url (for OpenAI/custom endpoints)
-# - anthropic: api_key (for Claude models)
-# - google: api_key (for Gemini models)
-
-# 🤖 Select your preferred LLM provider (optional)
-# Edit mcp_agent.config.yaml to choose your LLM (line ~106):
-# - llm_provider: "google"    # Use Google Gemini models
-# - llm_provider: "anthropic" # Use Anthropic Claude models
-# - llm_provider: "openai"    # Use OpenAI/compatible models
-# Note: If not set or unavailable, will automatically fallback to first available provider
-
-# 🔑 Configure search API keys for web search (optional)
-# Edit mcp_agent.config.yaml to set your API keys:
-# - For Brave Search: Set BRAVE_API_KEY: "your_key_here" in brave.env section (line ~28)
-# - For Bocha-MCP: Set BOCHA_API_KEY: "your_key_here" in bocha-mcp.env section (line ~74)
-
-# 📄 Configure document segmentation (optional)
-# Edit mcp_agent.config.yaml to control document processing:
-# - enabled: true/false (whether to use intelligent document segmentation)
-# - size_threshold_chars: 50000 (document size threshold to trigger segmentation)
-```
-
-#### 🔧 **Development Installation (From Source)**
-
-<details>
-<summary><strong>📂 Click to expand development installation options</strong></summary>
-
-##### 🔥 **Using UV (Recommended for Development)**
-
-```bash
-# 🔽 Clone the repository
-git clone https://github.com/HKUDS/DeepCode.git
-cd DeepCode/
-
-# 📦 Install UV package manager
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# 🔧 Install dependencies with UV
-uv venv --python=3.13
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-uv pip install -r requirements.txt
-
-# 🔑 Configure API keys (required)
-# Edit mcp_agent.secrets.yaml with your API keys and base_url:
-# - openai: api_key, base_url (for OpenAI/custom endpoints)
-# - anthropic: api_key (for Claude models)
-# - google: api_key (for Gemini models)
-
-# 🤖 Select your preferred LLM provider (optional)
-# Edit mcp_agent.config.yaml to choose your LLM (line ~106):
-# - llm_provider: "google"    # Use Google Gemini models
-# - llm_provider: "anthropic" # Use Anthropic Claude models
-# - llm_provider: "openai"    # Use OpenAI/compatible models
-# Note: If not set or unavailable, will automatically fallback to first available provider
-
-# 🔑 Configure search API keys for web search (optional)
-# Edit mcp_agent.config.yaml to set your API keys:
-# - For Brave Search: Set BRAVE_API_KEY: "your_key_here" in brave.env section (line ~28)
-# - For Bocha-MCP: Set BOCHA_API_KEY: "your_key_here" in bocha-mcp.env section (line ~74)
-
-# 📄 Configure document segmentation (optional)
-# Edit mcp_agent.config.yaml to control document processing:
-# - enabled: true/false (whether to use intelligent document segmentation)
-# - size_threshold_chars: 50000 (document size threshold to trigger segmentation)
-```
-
-##### 🐍 **Using Traditional pip**
-
-```bash
-# 🔽 Clone the repository
-git clone https://github.com/HKUDS/DeepCode.git
-cd DeepCode/
-
-# 📦 Install dependencies
-pip install -r requirements.txt
-
-# 🔑 Configure API keys (required)
-# Edit mcp_agent.secrets.yaml with your API keys and base_url:
-# - openai: api_key, base_url (for OpenAI/custom endpoints)
-# - anthropic: api_key (for Claude models)
-# - google: api_key (for Gemini models)
-
-# 🤖 Select your preferred LLM provider (optional)
-# Edit mcp_agent.config.yaml to choose your LLM (line ~106):
-# - llm_provider: "google"    # Use Google Gemini models
-# - llm_provider: "anthropic" # Use Anthropic Claude models
-# - llm_provider: "openai"    # Use OpenAI/compatible models
-# Note: If not set or unavailable, will automatically fallback to first available provider
-
-# 🔑 Configure search API keys for web search (optional)
-# Edit mcp_agent.config.yaml to set your API keys:
-# - For Brave Search: Set BRAVE_API_KEY: "your_key_here" in brave.env section (line ~28)
-# - For Bocha-MCP: Set BOCHA_API_KEY: "your_key_here" in bocha-mcp.env section (line ~74)
-
-# 📄 Configure document segmentation (optional)
-# Edit mcp_agent.config.yaml to control document processing:
-# - enabled: true/false (whether to use intelligent document segmentation)
-# - size_threshold_chars: 50000 (document size threshold to trigger segmentation)
-```
-
-</details>
-
-#### 🪟 **Windows Users: Additional MCP Server Configuration**
-
-If you're using Windows, you may need to configure MCP servers manually in `mcp_agent.config.yaml`:
-
-```bash
-# 1. Install MCP servers globally
-npm i -g @modelcontextprotocol/server-brave-search
-npm i -g @modelcontextprotocol/server-filesystem
-
-# 2. Find your global node_modules path
-npm -g root
-```
-
-Then update your `mcp_agent.config.yaml` to use absolute paths:
-
-```yaml
-mcp:
-  servers:
-    brave:
-      command: "node"
-      args: ["C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-brave-search/dist/index.js"]
-    filesystem:
-      command: "node"
-      args: ["C:/Program Files/nodejs/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js", "."]
-```
-
-> **Note**: Replace the path with your actual global node_modules path from step 2.
-
-#### 🔍 **Search Server Configuration (Optional)**
-
-DeepCode supports multiple search servers for web search functionality. You can configure your preferred option in `mcp_agent.config.yaml`:
-
-```yaml
-# Default search server configuration
-# Options: "brave" or "bocha-mcp"
-default_search_server: "brave"
-```
-
-**Available Options:**
-- **🔍 Brave Search** (`"brave"`):
-  - Default option with high-quality search results
-  - Requires BRAVE_API_KEY configuration
-  - Recommended for most users
-
-- **🌐 Bocha-MCP** (`"bocha-mcp"`):
-  - Alternative search server option
-  - Requires BOCHA_API_KEY configuration
-  - Uses local Python server implementation
-
-**API Key Configuration in mcp_agent.config.yaml:**
-```yaml
-# For Brave Search (default) - around line 28
-brave:
-  command: "npx"
-  args: ["-y", "@modelcontextprotocol/server-brave-search"]
-  env:
-    BRAVE_API_KEY: "your_brave_api_key_here"
-
-# For Bocha-MCP (alternative) - around line 74
-bocha-mcp:
-  command: "python"
-  args: ["tools/bocha_search_server.py"]
-  env:
-    PYTHONPATH: "."
-    BOCHA_API_KEY: "your_bocha_api_key_here"
-```
-
-> **💡 Tip**: Both search servers require API key configuration. Choose the one that best fits your API access and requirements.
-
-### ⚡ **Step 2: Launch Application**
-
-#### 🚀 **Using Installed Package (Recommended)**
-
-```bash
-# 🌐 Launch web interface directly
-deepcode
-
-# The application will automatically start at http://localhost:8501
-```
-
-#### 🛠️ **Using Source Code**
-
-Choose your preferred interface:
-
-##### 🌐 **Web Interface** (Recommended)
-```bash
-# Using UV
-uv run streamlit run ui/streamlit_app.py
-# Or using traditional Python
-streamlit run ui/streamlit_app.py
-```
-<div align="center">
-  <img src="https://img.shields.io/badge/Access-localhost:8501-00d4ff?style=flat-square&logo=streamlit&logoColor=white" alt="Web Access" />
-</div>
-
-##### 🖥️ **CLI Interface** (Advanced Users)
-```bash
-# Using UV
-uv run python cli/main_cli.py
-# Or using traditional Python
-python cli/main_cli.py
-```
-<div align="center">
-  <img src="https://img.shields.io/badge/Mode-Interactive_Terminal-9b59b6?style=flat-square&logo=terminal&logoColor=white" alt="CLI Mode" />
-</div>
-
-### 🎯 **Step 3: Generate Code**
-
-1. **📄 Input**: Upload your research paper, provide requirements, or paste a URL
-2. **🤖 Processing**: Watch the multi-agent system analyze and plan
-3. **⚡ Output**: Receive production-ready code with tests and documentation
-
-
-  ---
-
-## 💡 Examples
-
-
-
-### 🎬 **Live Demonstrations**
-
-
-
-<table align="center">
-<tr>
-<td width="33%" align="center">
-
-#### 📄 **Paper2Code Demo**
-**Research to Implementation**
-
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=MQZYpLkzsbw">
-    <img src="https://img.youtube.com/vi/MQZYpLkzsbw/maxresdefault.jpg" alt="Paper2Code Demo" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  </a>
-
-  **[▶️ Watch Demo](https://www.youtube.com/watch?v=MQZYpLkzsbw)**
-
-  *Transform academic papers into production-ready code automatically*
-</div>
-
-</td>
-<td width="33%" align="center">
-
-#### 🖼️ **Image Processing Demo**
-**AI-Powered Image Tools**
-
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=nFt5mLaMEac">
-    <img src="https://img.youtube.com/vi/nFt5mLaMEac/maxresdefault.jpg" alt="Image Processing Demo" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  </a>
-
-  **[▶️ Watch Demo](https://www.youtube.com/watch?v=nFt5mLaMEac)**
-
-  *Intelligent image processing with background removal and enhancement*
-</div>
-
-</td>
-<td width="33%" align="center">
-
-#### 🌐 **Frontend Implementation**
-**Complete Web Application**
-
-<div align="center">
-  <a href="https://www.youtube.com/watch?v=78wx3dkTaAU">
-    <img src="https://img.youtube.com/vi/78wx3dkTaAU/maxresdefault.jpg" alt="Frontend Demo" width="100%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
-  </a>
-
-  **[▶️ Watch Demo](https://www.youtube.com/watch?v=78wx3dkTaAU)**
-
-  *Full-stack web development from concept to deployment*
-</div>
-
-</td>
-</tr>
-</table>
-
-
-
-### 🆕 **Recent Updates**
-
-#### 📄 **Smart Document Segmentation (v1.2.0)**
-- **Intelligent Processing**: Automatically handles large research papers and technical documents that exceed LLM token limits
-- **Configurable Control**: Toggle segmentation via configuration with size-based thresholds
-- **Semantic Analysis**: Advanced content understanding with algorithm, concept, and formula preservation
-- **Backward Compatibility**: Seamlessly falls back to traditional processing for smaller documents
-
-### 🚀 **Coming Soon**
-
-We're continuously enhancing DeepCode with exciting new features:
-
-#### 🔧 **Enhanced Code Reliability & Validation**
-- **Automated Testing**: Comprehensive functionality testing with execution verification and error detection.
-- **Code Quality Assurance**: Multi-level validation through static analysis, dynamic testing, and performance benchmarking.
-- **Smart Debugging**: AI-powered error detection with automatic correction suggestions
-
-#### 📊 **PaperBench Performance Showcase**
-- **Benchmark Dashboard**: Comprehensive performance metrics on the PaperBench evaluation suite.
-- **Accuracy Metrics**: Detailed comparison with state-of-the-art paper reproduction systems.
-- **Success Analytics**: Statistical analysis across paper categories and complexity levels.
-
-#### ⚡ **System-wide Optimizations**
-- **Performance Boost**: Multi-threaded processing and optimized agent coordination for faster generation.
-- **Enhanced Reasoning**: Advanced reasoning capabilities with improved context understanding.
-- **Expanded Support**: Extended compatibility with additional programming languages and frameworks.
-
----
-
-## ⭐ Star History
-
-<div align="center">
-
-*Community Growth Trajectory*
-
-<a href="https://star-history.com/#HKUDS/DeepCode&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HKUDS/DeepCode&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HKUDS/DeepCode&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HKUDS/DeepCode&type=Date" style="border-radius: 15px; box-shadow: 0 0 30px rgba(0, 217, 255, 0.3);" />
-  </picture>
-</a>
-
-</div>
-
----
-
-### 🚀 **Ready to Transform Development?**
-
-<div align="center">
-
-<p>
-  <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Get_Started-00d4ff?style=for-the-badge&logo=rocket&logoColor=white" alt="Get Started"></a>
-  <a href="https://github.com/HKUDS"><img src="https://img.shields.io/badge/🏛️_View_on_GitHub-00d4ff?style=for-the-badge&logo=github&logoColor=white" alt="View on GitHub"></a>
-  <a href="https://github.com/HKUDS/deepcode-agent"><img src="https://img.shields.io/badge/⭐_Star_Project-00d4ff?style=for-the-badge&logo=star&logoColor=white" alt="Star Project"></a>
-</p>
-
----
-
-<div align="left">
-
-### 📖 **Citation**
-
-
-If you find DeepCode useful in your research or applications, please kindly cite:
-
-```
-@misc{li2025deepcodeopenagenticcoding,
-      title={DeepCode: Open Agentic Coding},
-      author={Zongwei Li and Zhonghang Li and Zirui Guo and Xubin Ren and Chao Huang},
-      year={2025},
-      eprint={2512.07921},
-      archivePrefix={arXiv},
-      primaryClass={cs.SE},
-      url={https://arxiv.org/abs/2512.07921},
+### 📋 **Phase Details**
+
+#### **Phase 1: Deconstruction**
+**Agents**: The Theorist + The Critic
+
+- **Input**: PDF/LaTeX paper
+- **Output**: 
+  - `game_model.json` (players, states, actions, utilities)
+  - `test_verification.py` (Propositions → unit tests)
+
+**Example JSON:**
+```json
+{
+  "players": ["physician", "patient"],
+  "state_variables": {
+    "prior_belief": {"type": "float", "range": [0, 1]},
+    "test_cost": {"type": "float", "range": [0, 10]}
+  },
+  "actions": {
+    "physician": ["TEST", "NO_TEST"],
+    "patient": ["ACCEPT", "REJECT"]
+  },
+  "utility_functions": {
+    "physician": "U_doc = reputation - cost * I_test",
+    "patient": "U_patient = health_gain - payment"
+  }
 }
 ```
 
+#### **Phase 2: Architecture & Coding**
+**Agents**: The Architect + The Engineer
+
+- **Input**: `game_model.json`
+- **Output**: Production-ready simulation code
+  - `environment.py` — White-box (no LLM calls)
+  - `agents.py` — Gray-box (LLM-powered decisions)
+  - `runner.py` — Simulation orchestration
+  - `config.py` — Hyperparameters
+
+**Code Structure:**
+```
+simulation/
+├── environment.py      # Pure math implementation
+├── agents.py           # LLM agent classes
+├── runner.py           # Main simulation loop
+├── config.py           # Parameters & settings
+├── tests/              # Unit tests from Phase 1
+│   └── test_propositions.py
+└── main.py             # Entry point
+```
+
+#### **Phase 3: Verification & Calibration**
+**Agent**: The QA Specialist
+
+- **Process**:
+  1. Set Temperature=0
+  2. Run all unit tests from Phase 1
+  3. If failures detected:
+     - Extract decision chain-of-thought
+     - Diagnose error type (calculation, motivation, strategy, probability)
+     - Apply targeted prompt fix
+     - Retry
+  4. Iterate until 100% test pass rate
+
+- **Milestone**: System marked as `Calibrated` ✅
+
+#### **Phase 4: Advanced Features (Optional)**
+**Agents**: The Historian + Narrative Designer + Red Teamer
+
+Once calibrated, enable:
+
+1. **Memory (Historian)**
+   - Vector store for episodic memory
+   - Psychological states (trust, frustration, confidence)
+   - Path-dependent behavior
+
+2. **Language (Narrative Designer)**
+   - Natural language communication between agents
+   - Framing effects (90% survival vs 10% death)
+   - Deception detection
+
+3. **Red Teaming**
+   - Evolutionary strategy search
+   - Mechanism exploit discovery
+   - Robustness report generation
+
 ---
 
+## ⚡ Quick Start
 
-### 📄 **License**
+### 📦 **Installation**
+
+#### **Option 1: Using UV (Recommended)**
+
+```bash
+# Clone repository
+git clone https://github.com/HKUDS/DeepCode.git
+cd DeepCode/
+git checkout paper2sim
+
+# Install UV package manager
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Setup environment
+uv venv --python=3.10
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+uv pip install -r requirements.txt
+```
+
+#### **Option 2: Using pip**
+
+```bash
+# Clone repository
+git clone https://github.com/HKUDS/DeepCode.git
+cd DeepCode/
+git checkout paper2sim
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 🔑 **Configuration**
+
+#### **Step 1: Configure LLM API Keys**
+
+Edit `mcp_agent.secrets.yaml`:
+
+```yaml
+# Choose ONE of the following:
+
+# Option A: OpenRouter (Recommended - access all models with one key)
+openrouter:
+  api_key: "sk-or-v1-your-key-here"
+
+# Option B: OpenAI
+openai:
+  api_key: "sk-your-openai-key"
+  base_url: "https://api.openai.com/v1"  # or custom endpoint
+
+# Option C: Anthropic
+anthropic:
+  api_key: "sk-ant-your-key"
+
+# Option D: Google Gemini
+google:
+  api_key: "your-gemini-key"
+```
+
+**🎯 Get OpenRouter Key (Recommended):**
+- Visit: https://openrouter.ai/keys
+- One key for all models (OpenAI, Anthropic, Google, DeepSeek, etc.)
+
+#### **Step 2: Select LLM Provider**
+
+Edit `mcp_agent.config.yaml` (line ~106):
+
+```yaml
+# Choose your preferred provider
+llm_provider: "openrouter"  # or "openai", "anthropic", "google"
+
+# OpenRouter model configuration (if using OpenRouter)
+openrouter:
+  base_url: "https://openrouter.ai/api/v1"
+  default_model: "anthropic/claude-sonnet-4"           # Reasoning
+  planning_model: "anthropic/claude-sonnet-4"          # Extraction & planning
+  implementation_model: "google/gemini-2.0-flash-exp"  # Code generation
+```
+
+**💡 Recommended Model Combinations:**
+
+| Use Case | Planning Model | Implementation Model |
+|----------|---------------|----------------------|
+| **Best Quality** | `anthropic/claude-opus-4` | `anthropic/claude-sonnet-4` |
+| **Balanced** ⭐ | `anthropic/claude-sonnet-4` | `google/gemini-2.0-flash-exp` |
+| **Budget** | `google/gemini-2.5-flash` | `google/gemini-2.0-flash-exp` |
+
+#### **Step 3 (Optional): Web Search API**
+
+For paper reference analysis, configure search (line ~28 or ~74):
+
+```yaml
+# Option A: Brave Search
+brave:
+  env:
+    BRAVE_API_KEY: "your_brave_key"
+
+# Option B: Bocha-MCP
+bocha-mcp:
+  env:
+    BOCHA_API_KEY: "your_bocha_key"
+```
+
+### 🚀 **Run Paper2Sim**
+
+```bash
+# Basic usage
+python -m paper2sim.main --paper path/to/paper.md
+
+# Specify output directory
+python -m paper2sim.main --paper paper.md --output ./simulations --name physician_sim
+
+# Enable Phase 4 features (after calibration!)
+python -m paper2sim.main --paper paper.md --phase4
+```
+
+### 📝 **Programmatic Usage**
+
+```python
+from paper2sim.workflows.paper2sim_workflow import Paper2SimWorkflow
+from utils.llm_utils import get_preferred_llm_class
+
+# Initialize workflow
+workflow = Paper2SimWorkflow(
+    llm_factory=get_preferred_llm_class(),
+    output_base_dir="./paper2sim_output"
+)
+
+# Run pipeline
+results = await workflow.run_full_pipeline(
+    paper_path="papers/physician_testing.md",
+    project_name="physician_sim",
+    enable_phase4=False  # Start with calibration only
+)
+
+# Check calibration status
+if results['is_calibrated']:
+    print("✅ Simulation is calibrated and ready!")
+    print(f"📁 Output: {results['output_dir']}")
+```
+
+---
+
+## 💡 Usage Examples
+
+### Example 1: Physician Testing Game
+
+**Paper**: "Physician Testing in Signaling Equilibria"
+
+```bash
+python -m paper2sim.main --paper papers/physician_testing.pdf
+```
+
+**Generated Output:**
+```
+paper2sim_output/physician_testing/
+├── game_model.json              # Extracted: 2 players, 4 states, 2 actions
+├── architecture.json             # Design: Bayesian signaling game
+├── test_verification.py          # 5 propositions → unit tests
+├── calibration_report.json       # ✅ 100% test pass (3 iterations)
+└── simulation/
+    ├── environment.py            # Bayesian update logic
+    ├── agents.py                 # PhysicianAgent, PatientAgent
+    ├── runner.py                 # 1000-round simulation
+    └── main.py                   # python main.py to run
+```
+
+**Calibration Report:**
+```json
+{
+  "status": "calibrated",
+  "iterations": 3,
+  "test_results": {
+    "test_prop1_cost_threshold": "PASS",
+    "test_prop2_separating_eq": "PASS",
+    "test_prop3_pooling_condition": "PASS",
+    "test_lemma1_belief_update": "PASS",
+    "test_prop4_welfare": "PASS"
+  },
+  "fixes_applied": [
+    "Added Python calculator tool for expected value computation",
+    "Clarified long-term reputation importance in system prompt"
+  ]
+}
+```
+
+### Example 2: Screening Game with Phase 4
+
+```bash
+python -m paper2sim.main --paper papers/insurance_screening.md --phase4
+```
+
+**Phase 4 Features Enabled:**
+- **Memory**: Insurers remember past claims, adjust premiums based on trust
+- **Language**: Customers use framing ("peace of mind" vs "unlikely to claim")
+- **Red Team**: Discovers premium discrimination exploit
+
+---
+
+## 📊 Output Structure
+
+```
+paper2sim_output/
+└── {project_name}/
+    ├── game_model.json              # Phase 1: Extracted game structure
+    │   ├── players                   # [str] Player roles
+    │   ├── state_variables           # {name: {type, range, description}}
+    │   ├── actions                   # {player: [actions]}
+    │   ├── utility_functions         # {player: formula}
+    │   └── propositions              # [{statement, conditions}]
+    │
+    ├── architecture.json             # Phase 2: System design spec
+    │   ├── file_structure            # Planned directory tree
+    │   ├── environment_design        # White-box implementation notes
+    │   ├── agent_design              # Gray-box agent architecture
+    │   └── dependencies              # Required libraries
+    │
+    ├── test_verification.py          # Phase 1: Generated unit tests
+    │   └── def test_prop{N}(): ...   # One test per proposition
+    │
+    ├── calibration_report.json       # Phase 3: QA results
+    │   ├── status                    # "calibrated" | "failed"
+    │   ├── iterations                # Number of debug cycles
+    │   ├── test_results              # {test_name: PASS/FAIL}
+    │   └── fixes_applied             # [str] Prompt modifications
+    │
+    └── simulation/                   # Phase 2: Generated code
+        ├── environment.py            # ✅ White-box (no LLM)
+        ├── agents.py                 # ✅ Gray-box (LLM-powered)
+        ├── runner.py                 # Simulation orchestration
+        ├── config.py                 # Hyperparameters
+        ├── main.py                   # Entry point
+        ├── requirements.txt          # Python dependencies
+        ├── README.md                 # Usage instructions
+        └── tests/
+            └── test_propositions.py  # Copy of verification tests
+```
+
+---
+
+## 🎓 Supported Paper Types
+
+Paper2Sim works best with papers containing:
+
+### ✅ **Ideal Paper Types**
+- **Signaling games** (e.g., education signaling, physician testing)
+- **Screening games** (e.g., insurance markets, credit scoring)
+- **Mechanism design** (e.g., auctions, matching markets)
+- **Repeated games** (e.g., trust games, cooperation)
+- **Bayesian games** (information asymmetry, beliefs)
+
+### 📋 **Required Paper Elements**
+- ✅ Clearly defined players
+- ✅ State variables and action spaces
+- ✅ Utility/payoff functions (equations)
+- ✅ At least one Proposition/Lemma/Theorem
+- ✅ Mathematical model description
+
+### ⚠️ **Not Yet Supported**
+- ❌ Dynamic programming (infinite horizon)
+- ❌ Continuous-time models
+- ❌ Papers without explicit game structure
+- ❌ Purely empirical papers (no theory)
+
+---
+
+## 🔧 Configuration
+
+### Advanced Settings
+
+Edit `mcp_agent.config.yaml` for fine-tuning:
+
+#### **Document Segmentation**
+```yaml
+document_segmentation:
+  enabled: true                   # Auto-split large papers
+  size_threshold_chars: 50000     # Trigger threshold
+```
+
+#### **Simulation Parameters**
+```yaml
+paper2sim:
+  max_calibration_iterations: 10  # Max debug cycles
+  test_temperature: 0.0            # Calibration temperature
+  exploration_temperature: 0.7     # Phase 4 temperature
+  
+  phase4:
+    enable_memory: true            # ChromaDB integration
+    enable_language: true          # NL communication
+    enable_red_teaming: true       # Adversarial testing
+```
+
+#### **Model Selection Per Phase**
+```yaml
+openrouter:
+  # Phase 1-3: High reasoning capability
+  planning_model: "anthropic/claude-sonnet-4"
+  
+  # Phase 2: Code generation
+  implementation_model: "google/gemini-2.0-flash-exp"
+  
+  # Phase 4: High concurrency, human-like randomness
+  simulation_model: "google/gemini-2.0-flash-exp"
+```
+
+---
+
+## 🤝 Contributing
+
+Paper2Sim is part of the **DeepCode** project:
+- **Main branch**: General research-to-code automation
+- **paper2sim branch**: Specialized for OR/game theory
+
+To contribute:
+1. Fork the repository
+2. Create feature branch from `paper2sim`
+3. Submit PR with description
+
+---
+
+## 📚 Documentation
+
+Detailed technical specifications:
+- Phase 1: `paper2sim/prompts/phase1_prompts.py`
+- Phase 2: `paper2sim/prompts/phase2_prompts.py`
+- Phase 3: `paper2sim/prompts/phase3_prompts.py`
+- Phase 4: `paper2sim/prompts/phase4_prompts.py`
+
+---
+
+## 🆘 Troubleshooting
+
+### Common Issues
+
+**Issue: "No API keys configured"**
+```bash
+# Check secrets file
+cat mcp_agent.secrets.yaml | grep api_key
+
+# Or set environment variable
+export OPENROUTER_API_KEY="sk-or-v1-..."
+```
+
+**Issue: "Calibration failed after max iterations"**
+- Review `calibration_report.json` for diagnosed issues
+- Paper may lack clear mathematical formulation
+- Try adjusting `test_temperature` in config
+
+**Issue: "Model extraction incomplete"**
+- Ensure paper has explicit game structure
+- Check if paper is too large (enable segmentation)
+- Try using higher-capability planning model
+
+---
+
+## 📄 License
 
 <div align="center">
 
@@ -910,9 +662,16 @@ If you find DeepCode useful in your research or applications, please kindly cite
 
 **MIT License** - Copyright (c) 2025 Data Intelligence Lab, The University of Hong Kong
 
+Built on the **DeepCode** framework | **Branch: paper2sim**
+
 ---
 
+<p>
+  <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Get_Started-00d4ff?style=for-the-badge&logo=rocket&logoColor=white" alt="Get Started"></a>
+  <a href="https://github.com/HKUDS/DeepCode"><img src="https://img.shields.io/badge/🏛️_Main_Project-00d4ff?style=for-the-badge&logo=github&logoColor=white" alt="Main Project"></a>
+  <a href="https://discord.gg/yF2MmDJyGJ"><img src="https://img.shields.io/badge/💬_Join_Discord-7289da?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+</p>
 
-<img src="https://visitor-badge.laobi.icu/badge?page_id=deepcode.readme&style=for-the-badge&color=00d4ff" alt="Visitors">
+<img src="https://visitor-badge.laobi.icu/badge?page_id=paper2sim.readme&style=for-the-badge&color=00d4ff" alt="Visitors">
 
 </div>
